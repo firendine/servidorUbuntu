@@ -1,0 +1,150 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+function desplegar_categorias(compra) {
+        if (compra.id == "item-1") {
+
+            if (document.getElementById("articulo-1")) {
+
+
+                if (document.getElementById("contador-1")) {
+                    var count = 2;
+                    var sumaCont = document.createTextNode(count++);
+                    var item = document.getElementById("contador-1").textContent;
+                    item.replaceChild(sumaCont, item);
+                    console.log(item);
+
+                    //document.getElementById("contador-1").replaceChild();
+
+                } else {
+                    var contador = document.createTextNode(2);
+                    var contadorSpan = document.createElement("span");
+                    contadorSpan.id = "contador-1"
+                    document.getElementById("articulo-1").appendChild(contadorSpan);
+                    document.getElementById("contador-1").appendChild(contador);
+
+                }
+
+                /*
+                node = document.createElement("span");
+                document.getElementById("articulo-1").appendChild(node);
+                contador = document.createTextNode(1);
+                node.appendChild(contador).innerText = contador++;
+                */
+
+            } else {
+                var articulo = document.createElement("div");
+                var imagen = document.createElement("img");
+                var precio = document.createElement("span");
+                articulo.id = "articulo-1";
+                precio.id = "precioTotal-1";
+
+
+                var recogerPrecio = document.getElementById("item-precio-1").textContent;
+                var valorPrecio = document.createTextNode(recogerPrecio);
+
+
+                imagen.src = compra.getElementsByTagName("img")[0].src;
+                document.getElementById("purchases").appendChild(articulo);
+                document.getElementById("articulo-1").appendChild(imagen);
+                document.getElementById("articulo-1").appendChild(precio);
+                document.getElementById("precioTotal-1").appendChild(valorPrecio);
+
+            }
+        }
+
+    }
+</script>
+<body class="body">
+    <div class="">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="..." alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="..." alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="..." alt="Third slide">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="l-landing-page">
+        <nav class="l-landing-page__header">
+            <span>Header Arriba</span>
+        </nav>
+        <aside class="l-landing-page__categorias l-categorias">
+            <header class="l-categorias__header">
+                <span>Categorias</span>
+            </header>
+            <div class="l-categorias__body">
+                <ul>
+                    <li>
+                        <span>item 1</span>
+                    </li>
+                    <li>
+                        <span>item 2</span>
+                    </li>
+                    <li>
+                        <span>item 3</span>
+                    </li>
+                    <li>
+                        <span>item 4</span>
+                    </li>
+                    <li>
+                        <span>item 5</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="l-landing-page__productos">
+            <header>
+                <span>Productos</span>
+            </header>
+            <div class="l-productos">
+                <div class="l-productos__item1">
+                    <span>producto1</span>
+                </div>
+                <div class="l-productos__item-destacado">
+                    <span>destacado</span>
+                </div>
+                <div class="l-productos__item2">
+                    <span>producto2</span>
+                </div>
+                <div class="l-productos__item3">
+                    <span>producto3</span>
+                </div>
+                <div class="l-productos__item4">
+                    <span>producto4</span>
+                </div>
+                <div class="l-productos__item5">
+                    <span>producto5</span>
+                </div>
+                <div class="l-productos__item6">
+                    <span>producto6</span>
+                </div>
+                <div class="l-productos__item7">
+                    <span>producto7</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="l-landing-page__other">
+            <span>Aqui hay otra cosa</span>
+        </div>
+        <div class="l-landing-page__footer">
+            <span>Footer</span>
+        </div>
+
+    </div>
+</body>
+<footer>
+</footer>
+
+</html>

@@ -1,0 +1,43 @@
+
+.l-productos{
+    display:grid;
+    
+    grid-template-areas:
+        'item1 item-destacado item2'
+        'item3 item-destacado item4'
+        'item5 item6 item7';
+        
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 10px;
+        grid-row-gap: 10px;
+
+        padding: 10px;
+
+}
+@for $i from 1 through 7{
+    .l-productos__item#{$i}{
+        border:1px ;
+        border-style: solid;
+        border-color: RGB(211,211,211);
+        background-color: RGB(211,211,211, 0.5);
+
+        grid-area: item+$i;
+        
+    }
+}
+.l-productos__item-destacado{
+    border:2px ;
+        border-style: solid;
+        border-color:gold;
+        background-color: yellow;
+
+        grid-area: item-destacado;
+
+}
+
+.layout-main-menu{
+    display: flex;
+    flex-direction:column;
+
+}

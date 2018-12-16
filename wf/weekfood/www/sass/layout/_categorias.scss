@@ -1,0 +1,16 @@
+.l-categorias{
+
+    
+}
+.l-categorias__header{
+
+}
+.l-categorias__body{
+    display:flex;
+    flex-direction: column;
+}
+@media (max-width: 800px){
+    .l-categorias__body{
+        display:none;
+    }
+}

@@ -1,0 +1,22 @@
+@import '../abstracts/_variables';
+html {
+font-family: $main-font;
+color: black;
+}
+.text--S{
+    font-size:map-get($font-sizes,small);
+}
+.text--M{
+    font-size:map-get($font-sizes,medium);
+}
+
+.text--L{
+    font-size:map-get($font-sizes,large);
+}
+
+.text--XL{
+    font-size:map-get($font-sizes,extralarge);
+}
+
+
+
